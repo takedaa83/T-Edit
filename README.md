@@ -2,9 +2,8 @@
 
 <div align="center">
   
-![T-Edit Banner](docs/images/banner.png)
 
-*The elegant item editor for Minecraft servers*
+*Enchanting made easier!*
 
 </div>
 
@@ -12,7 +11,7 @@
 
 T-Edit is a modern, feature-rich GUI-based item editor that allows server administrators and players to modify items with ease and elegance. With a sleek purple-themed interface and intuitive controls, T-Edit brings the power of advanced item manipulation into an accessible package.
 
-![T-Edit Interface](docs/images/interface.png)
+![T-Edit Interface](images/interface.png)
 
 ## 🌟 Features
 
@@ -26,7 +25,7 @@ T-Edit is a modern, feature-rich GUI-based item editor that allows server admini
 
 ## 📥 Installation
 
-1. Download the latest version of T-Edit from [GitHub Releases](https://github.com/your-username/T-Edit/releases) or [Spigot](https://www.spigotmc.org/resources/)
+1. Download the latest version of T-Edit from [GitHub Releases](https://github.com/takedaa83/T-Edit/releases)
 2. Place the JAR file in your server's `plugins` folder
 3. Restart your server or use a plugin manager to load the plugin
 4. Edit the configuration files in the `plugins/T-Edit` directory if desired
@@ -117,13 +116,13 @@ sounds:
 
 ## 📷 Screenshots
 
-![Item Renaming](docs/images/rename.png)
+![Item Renaming](images/rename.png)
 *Item renaming with MiniMessage support*
 
-![Enchantment Management](docs/images/enchantments.png)
+![Enchantment Management](images/enchantments.png)
 *Intuitive enchantment management interface*
 
-![Lore Editing](docs/images/lore.png)
+![Lore Editing](images/lore.png)
 *Adding and editing lore with ease*
 
 ## 💡 Tips & Tricks
@@ -168,6 +167,6 @@ T-Edit is released under the MIT License. See the [LICENSE](LICENSE) file for de
 <div align="center">
   
 [![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-discord)
-[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-Support%20the%20project-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/your-username)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-Support%20the%20project-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/takedaa83)
 
 </div> 
