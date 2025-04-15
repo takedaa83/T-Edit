@@ -1,0 +1,36 @@
+# T-Edit Core Configuration
+
+# Enable detailed console logging for debugging purposes.
+debug:
+  enabled: false
+
+# --- Enchantment Settings ---
+enchantments:
+  # Allow players with 'tedit.enchant.bypasslevel' to exceed vanilla max levels?
+  allow_bypass_level_caps: false
+  # Allow players with 'tedit.enchant.bypassconflict' to apply conflicting enchants?
+  allow_bypass_conflicts: false
+  # Allow players with 'tedit.enchant.treasure' to apply Treasure enchants (e.g., Mending)?
+  allow_treasure: true
+  # Allow players with 'tedit.enchant.curses' to apply Curses (e.g., Vanishing)?
+  allow_curses: true
+  # Note: The plugin also restricts enchant display/application to generally applicable
+  # item types (Armor, Tools, Weapons, Books, Bows, etc.) via internal checks.
+
+# --- Item Blacklist ---
+# Prevent specific items from being opened in the T-Edit GUI at all.
+# Use material names (e.g., 'BARRIER', 'BEDROCK').
+# Tags (e.g., '#minecraft:logs') are NOT currently supported.
+item-blacklist:
+  - "BARRIER"
+  - "COMMAND_BLOCK"
+  - "CHAIN_COMMAND_BLOCK"
+  - "REPEATING_COMMAND_BLOCK"
+  - "COMMAND_BLOCK_MINECART"
+  - "STRUCTURE_BLOCK"
+  - "STRUCTURE_VOID"
+  - "JIGSAW"
+  - "BEDROCK"
+  - "END_PORTAL_FRAME"
+  - "SPAWNER"
+  # Add any other items you want to completely block from editing

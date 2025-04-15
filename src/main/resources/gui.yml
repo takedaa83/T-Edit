@@ -1,0 +1,87 @@
+# T-Edit GUI Layout
+title: "<gradient:#AA00FF:#DD55FF><bold>T-Edit Item Editor</bold></gradient>"
+# Size must be a multiple of 9, max 54.
+size: 54
+
+# Placeholder for empty slots in controlled areas (top/bottom rows)
+placeholder_item:
+  material: BLACK_STAINED_GLASS_PANE
+  name: " "
+
+enchantment_display:
+  # Slots matching the desired layout, avoiding the purple frame
+  # at slots (12, 13, 14, 21, 23, 30, 31, 32)
+  slots: [
+    9, 10, 11,           15, 16, 
+    18, 19, 20,               24, 25,
+    27, 28, 29,                33, 34,
+    36, 37, 38,          40, 41, 42, 43
+  ]
+  # Formatting for the enchantment books themselves
+  book_item:
+    name: "<light_purple>{enchant_name} <dark_purple>┃ <white>Lvl <gold>{level}</gold><dark_gray>/{max_level}"
+    lore:
+      # These <key: ...> tags are resolved by EditGUI using messages.yml
+      # Conditional logic in EditGUI.createEnchantmentBook determines which ones appear.
+      # Make sure the corresponding keys exist in messages.yml!
+      - "<dark_gray>--------------------" # Separator line (parsed directly)
+      - "<key:lore_enchant_conflicts>"
+      - "<key:lore_enchant_howto_add>"
+      - "<key:lore_enchant_howto_increase>"
+      - "<key:lore_enchant_howto_decrease>"
+      - "<key:lore_enchant_howto_max_shift>"
+      # - "<key:lore_enchant_howto_max_bypass>" # Optional
+      - "<key:lore_enchant_howto_remove_shift>"
+
+
+elements:
+  # --- Core Action Buttons (Top Row) ---
+  rename:
+    enabled: true
+    slot: 0
+    permission: "tedit.rename"
+    item: { material: NAME_TAG, name: "<gradient:#AA00FF:#DD55FF><bold>Rename</bold></gradient>", lore: ["<gray>Click to rename item."] }
+  edit_lore:
+    enabled: true # Add Lore
+    slot: 1
+    permission: "tedit.lore.edit"
+    item: { material: WRITABLE_BOOK, name: "<gradient:#AA00FF:#DD55FF><bold>Add Lore</bold></gradient>", lore: ["<gray>Click to add a lore line."] }
+  remove_all_enchants:
+    enabled: true
+    slot: 2
+    permission: "tedit.enchant.base"
+    item: { material: GRINDSTONE, name: "<gradient:#AA00FF:#DD55FF><bold>Clear Enchants</bold></gradient>", lore: ["<gray>Strips all enchantments."] }
+  repair:
+    enabled: true
+    slot: 3
+    permission: "tedit.repair"
+    item: { material: ANVIL, name: "<gradient:#AA00FF:#DD55FF><bold>Repair</bold></gradient>", lore: ["<gray>Fully repairs durability."] }
+  clear_lore:
+    enabled: true
+    slot: 4
+    permission: "tedit.lore.clear"
+    item: { material: BUCKET, name: "<gradient:#AA00FF:#DD55FF><bold>Clear Lore</bold></gradient>", lore: ["<gray>Removes all lore lines."] }
+  duplicate:
+    enabled: true
+    slot: 8 # Top Right
+    permission: "tedit.duplicate"
+    item: { material: SLIME_BALL, name: "<gradient:#AA00FF:#DD55FF><bold>Duplicate</bold></gradient>", lore: ["<gray>Duplicates the current item.", "<red>Requires inventory space!"] }
+
+  # --- Preview Item (Center) ---
+  preview_item:
+    enabled: true # Must be enabled
+    slot: 22 # Center slot
+
+  # --- Pagination Controls (Bottom Row) ---
+  page_prev:
+    enabled: true
+    slot: 48 # Bottom row, near center-left
+    item: { material: ARROW, name: "<light_purple><bold>Previous Page</bold>", lore: ["<gray>View previous enchantments."], custom_model_data: 1 }
+  page_info:
+    enabled: true
+    slot: 49 # Bottom row, center
+    item: { material: PAPER, name: "<gray>Page <light_purple>{page}</light_purple>/<dark_purple>{total_pages}</dark_purple>", lore: [] }
+  page_next:
+    enabled: true
+    slot: 50 # Bottom row, near center-right
+    item: { material: ARROW, name: "<light_purple><bold>Next Page</bold>", lore: ["<gray>View next enchantments."], custom_model_data: 2 }
