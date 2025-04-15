@@ -1,5 +1,7 @@
+# Folders to ignore
 target/
 .vscode/
 .idea/
 
-*.T-Edit.iml
+# Files to ignore
+T-Edit.iml
