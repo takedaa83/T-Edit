@@ -1,172 +1,189 @@
-# T-Edit ✨
+
+<h1 align="center">T-Edit ✨</h1>
 
 <div align="center">
-  
 
 *Enchanting made easier!*
 
+![T-Edit Interface](images/interface.png)
+
 </div>
+
+---
 
 ## ✨ Overview
 
 T-Edit is a modern, feature-rich GUI-based item editor that allows server administrators and players to modify items with ease and elegance. With a sleek purple-themed interface and intuitive controls, T-Edit brings the power of advanced item manipulation into an accessible package.
 
-![T-Edit Interface](images/interface.png)
+---
 
 ## 🌟 Features
 
-- **Beautiful GUI Interface** - Clean, modern design with consistent purple theme
-- **Comprehensive Item Editing** - Edit names, lore, enchantments, and more
-- **Advanced Enchantment System** - Add, remove, and adjust enchantment levels with intuitive controls
-- **Permission-Based Access** - Granular permission system for fine-tuned control
-- **Fully Configurable** - Customize every aspect of the plugin to suit your server
-- **MiniMessage Support** - Create stunning text with gradient colors and formatting
-- **Paginated Enchantments** - Browse through all possible enchantments with ease
+- **Beautiful GUI Interface** – Clean, modern design with consistent purple theme  
+- **Comprehensive Item Editing** – Edit names, lore, enchantments, and more  
+- **Advanced Enchantment System** – Add, remove, and adjust enchantment levels  
+- **Permission-Based Access** – Granular permission system for control  
+- **Fully Configurable** – Customize every aspect of the plugin  
+- **MiniMessage Support** – Use gradient colors and text formatting  
+- **Paginated Enchantments** – Browse all enchantments with ease  
+
+---
 
 ## 📥 Installation
 
-1. Download the latest version of T-Edit from [GitHub Releases](https://github.com/takedaa83/T-Edit/releases)
-2. Place the JAR file in your server's `plugins` folder
-3. Restart your server or use a plugin manager to load the plugin
-4. Edit the configuration files in the `plugins/T-Edit` directory if desired
-5. Use the `/edit` command to start editing items!
+1. Download from [GitHub Releases](https://github.com/takedaa83/T-Edit/releases)  
+2. Place the `.jar` in the `plugins` folder  
+3. Restart your server  
+4. Optionally configure in `plugins/T-Edit`  
+5. Use `/edit` to get started!  
+
+---
 
 ## 🛠️ Commands
 
-| Command | Description | Permission |
-|---------|-------------|------------|
-| `/edit` | Opens the T-Edit GUI for the item in your main hand | `tedit.use` |
-| `/tedit reload` | Reloads all T-Edit configuration files | `tedit.reload` |
+| Command          | Description                          | Permission     |
+|------------------|--------------------------------------|----------------|
+| `/edit`          | Opens the GUI for held item          | `tedit.use`    |
+| `/tedit reload`  | Reloads configuration files          | `tedit.reload` |
+
+---
 
 ## 🔒 Permissions
 
-T-Edit uses a comprehensive permission system to control access to different features:
+### User
 
-### User Permissions
-- `tedit.use` - Allows using the `/edit` command to open the GUI
-- `tedit.rename` - Allows renaming items
-- `tedit.lore.edit` - Allows adding lore to items
-- `tedit.lore.clear` - Allows clearing all lore lines
-- `tedit.repair` - Allows repairing items
-- `tedit.duplicate` - Allows duplicating items
+- `tedit.use` – Use `/edit`
+- `tedit.rename` – Rename items
+- `tedit.lore.edit` – Add lore
+- `tedit.lore.clear` – Clear lore
+- `tedit.repair` – Repair item
+- `tedit.duplicate` – Duplicate item
 
-### Enchantment Permissions
-- `tedit.enchant.base` - Allows basic enchanting actions
-- `tedit.enchant.bypasslevel` - Allows enchanting above vanilla level caps
-- `tedit.enchant.bypassconflict` - Allows applying conflicting enchantments
-- `tedit.enchant.treasure` - Allows applying treasure enchantments
-- `tedit.enchant.curses` - Allows applying curse enchantments
+### Enchantments
 
-### Admin Permissions
-- `tedit.admin` - Grants access to administrative commands
-- `tedit.reload` - Allows reloading T-Edit configuration
+- `tedit.enchant.base` – Basic enchantment editing  
+- `tedit.enchant.bypasslevel` – Ignore vanilla level caps  
+- `tedit.enchant.bypassconflict` – Apply conflicting enchantments  
+- `tedit.enchant.treasure` – Use treasure enchantments  
+- `tedit.enchant.curses` – Use curses  
 
-### Permission Groups
-- `tedit.*` - Grants all T-Edit permissions
+### Admin
+
+- `tedit.admin` – All admin-level access  
+- `tedit.reload` – Reload configurations  
+
+### Wildcard
+
+- `tedit.*` – Grants all permissions  
+
+---
 
 ## ⚙️ Configuration
 
-T-Edit offers extensive configuration options across multiple files:
-
-### config.yml
-The main configuration file for core settings:
+### `config.yml`
 ```yaml
-# Enable detailed console logging for debugging purposes
 debug:
   enabled: false
 
-# Enchantment Settings
 enchantments:
   allow_bypass_level_caps: false
   allow_bypass_conflicts: false
   allow_treasure: true
   allow_curses: true
 
-# Item Blacklist
 item-blacklist:
   - "minecraft:barrier"
   - "minecraft:command_block"
-  # Add any items you want to block from editing
 ```
 
-### gui.yml
-Customize the GUI layout and appearance:
+### `gui.yml`
 ```yaml
 title: "<gradient:#AA00FF:#DD55FF><bold>T-Edit Item Editor</bold></gradient>"
 size: 54
-
-# Customize buttons, slots, and more
 ```
 
-### messages.yml
-Customize all player-facing messages with MiniMessage format:
+### `messages.yml`
 ```yaml
 prefix: "<gradient:#AA00FF:#DD55FF>T-Edit <dark_gray>» </dark_gray>"
-# Customize error messages, prompts, and action feedback
 ```
 
-### sounds.yml
-Customize sound effects for different actions:
+### `sounds.yml`
 ```yaml
 enabled: true
 sounds:
   gui_open: BLOCK_CHEST_OPEN
-  # Customize sounds for all actions
 ```
+
+---
 
 ## 📷 Screenshots
 
-![Item Renaming](images/rename.png)
-*Item renaming with MiniMessage support*
+<div align="center">
 
-![Enchantment Management](images/enchantments.png)
-*Intuitive enchantment management interface*
+<img src="images/rename.png" width="600"/><br>
+<i>Item renaming with MiniMessage support</i><br><br>
 
-![Lore Editing](images/lore.png)
-*Adding and editing lore with ease*
+<img src="images/enchantments.png" width="600"/><br>
+<i>Intuitive enchantment management interface</i><br><br>
+
+<img src="images/lore.png" width="600"/><br>
+<i>Adding and editing lore with ease</i>
+
+</div>
+
+---
 
 ## 💡 Tips & Tricks
 
-- **MiniMessage Format**: When renaming items or adding lore, you can use MiniMessage format for rich formatting. Try `<gradient:#AA00FF:#DD55FF>My Cool Sword</gradient>` for a beautiful gradient effect!
-- **Quick Navigation**: Use the pagination buttons to quickly browse through all available enchantments.
-- **Permission Setup**: Consider using a permissions plugin to create permission groups for different player ranks.
+- Use MiniMessage for rich formatting:  
+  `<gradient:#AA00FF:#DD55FF>Epic Sword</gradient>`
+- Use pagination buttons to browse enchantments
+- Use permission plugins to assign features by rank
+
+---
 
 ## ❓ Troubleshooting
 
-**Issue**: Plugin commands aren't working.  
-**Solution**: Ensure the user has the proper permissions and that the plugin is properly installed.
+**Command not working?**  
+→ Make sure you have the correct permission
 
-**Issue**: GUI doesn't open when using `/edit`.  
-**Solution**: Make sure you're holding an item in your main hand that isn't blacklisted.
+**GUI not opening?**  
+→ Check you're holding an editable item
 
-**Issue**: Enchantments aren't showing up.  
-**Solution**: Check that the item type can be enchanted and that the user has the necessary permissions.
+**Enchantments not showing?**  
+→ Ensure item is enchantable and permission is granted
+
+---
 
 ## 🤝 Contributing
 
-Contributions are welcome! If you'd like to contribute to T-Edit:
+1. Fork this repo  
+2. Create a branch: `git checkout -b feature/amazing-feature`  
+3. Commit: `git commit -m "Add amazing feature"`  
+4. Push: `git push origin feature/amazing-feature`  
+5. Open a Pull Request 🙌
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+---
 
 ## 📝 License
 
-T-Edit is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+Licensed under the [MIT License](LICENSE)
+
+---
 
 ## 🙏 Acknowledgments
 
-- Special thanks to the Bukkit/Spigot/Paper community
-- Thanks to all contributors and testers who helped make this plugin possible
+- Bukkit / Spigot / Paper community  
+- All testers and contributors  
 - Built with ❤️ by Takeda
 
 ---
 
 <div align="center">
-  
+
 [![Discord](https://img.shields.io/badge/Discord-Join%20our%20community-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/your-discord)
 [![GitHub Sponsors](https://img.shields.io/badge/Sponsor-Support%20the%20project-EA4AAA?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/takedaa83)
 
-</div> 
+</div>
+
+---
